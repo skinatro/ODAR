@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  background-color: #1d2021; /* Gruvbox background */
+  color: #ebdbb2; /* Gruvbox foreground */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#data-container {
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #839496; /* Gruvbox border */
+  border-radius: 5px;
+  width: 300px;
+  color: #ebdbb2; /* Gruvbox foreground */
+  background-color: #282828; /* Gruvbox dark background */
+}
+
+.gruvbox-fg {
+  color: #ebdbb2; /* Gruvbox foreground */
+}
+
+.gruvbox-bg {
+  background-color: #38444b; /* Gruvbox dark background */
+}
