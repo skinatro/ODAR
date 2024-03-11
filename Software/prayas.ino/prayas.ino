@@ -1,18 +1,39 @@
+#include <SoftwareSerial.h>
+
+//Define serial communication
+const int arduinoTxPin = 7;
+const int arduinoRxPin = 8;
+
+//interfacting
+SoftwareSerial espSerial(arduinoTxPin,arduinoRxPin);
+int esp8266Baud = 115200;
+
+//prayas :pray:
 #define ANALOG A6
 #define DIGITAL D5
 #define MOUNT 200
 #define SFIT 150
-
 int analog_in, digital_in;
 
 void setup() {
+  //monitoring
   serial.begin(9600);
   //idk wtf is this
   pinMode(ANALOG,INPUT);
   pinMode(DIGITAL,INPUT);
+
+  //communication with esp
+  espSerial.begin(esp8266Baud);
+  Serial.println("Initiate conversation...");
 }
 
 void loop() {
+
+  if(espSerial.available()){
+      char data = espSerial.read();
+      Serial.print("ESP8266 -> ");
+      Serial.println(data);
+  
   analog_in = analogRead(ANALOG);
   digital_in = digitalRead(DIGITAL);
 
