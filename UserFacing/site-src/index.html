@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ammonia Sensor Data</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
 </head>
 <body>
   <h1 class="gruvbox-fg">Ammonia Sensor Readings</h1>
   <div id="data-container" class="gruvbox-bg">
     <p>Waiting for data...</p>
   </div>
-  <script src="script.js"></script>
+
+  <canvas id="myChart" height="200"></canvas>
+  <script src="script.js"></script> <!-- Your custom script should be last -->
 </body>
 </html>

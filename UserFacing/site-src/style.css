@@ -1,29 +1,52 @@
 body {
   font-family: sans-serif;
-  background-color: #1d2021; /* Gruvbox background */
-  color: #ebdbb2; /* Gruvbox foreground */
+  background-color: #ede8e7; /* Gruvbox background */
+  color: #232828; /* Gruvbox foreground */
   margin: 0;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #data-container {
-  margin: 20px auto;
+  margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #839496; /* Gruvbox border */
   border-radius: 5px;
   width: 300px;
-  color: #ebdbb2; /* Gruvbox foreground */
-  background-color: #282828; /* Gruvbox dark background */
+  color: #232828; /* Gruvbox foreground */
+  background-color: #ede8e7; /* Gruvbox dark background */
+  text-align: center;
 }
 
 .gruvbox-fg {
-  color: #ebdbb2; /* Gruvbox foreground */
+  color: #232828; /* Gruvbox foreground */
 }
 
 .gruvbox-bg {
-  background-color: #38444b; /* Gruvbox dark background */
+  background-color: #ede8e7; /* Gruvbox dark background */
+}
+
+/* Chart styles */
+canvas#myChart {
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px;
+  height: 300px;
+  border: 1px solid #839496; /* Gruvbox border */
+  border-radius: 5px;
+}
+
+/* Chart.js specific styles (optional) */
+.chartjs-size-monitor {
+  display: none; /* Hide Chart.js size monitor */
+}
+
+.chartjs-user-defined {
+  /* Customize chart elements (lines, axes, etc.) using Chart.js options */
 }

@@ -9,7 +9,7 @@ Run the following command in the terminal
 
 ### Installing NPM Packages
 Run the following command in the terminal
-`$ npm install express body-parser`
+`$ npm install express body-parser ws`
 
 ### Dependencies Needed
 Make sure you have the following programs installed on your system 

@@ -15,7 +15,7 @@ def signal_handler(sig, frame):
 signal.signal(signal.SIGINT, signal_handler)  # Register interrupt handler
 
 while running:
-  sensor_data = {"levels": random.randint(90, 300)}  # Randomize levels
+  sensor_data = {"levels": random.randint(30, 50)}  # Randomize levels
 
   # Send POST request
   response = requests.post(server_url, json=sensor_data)
@@ -26,7 +26,6 @@ while running:
   else:
     print("Error sending data:", response.status_code)
 
-  # Wait before next update (randomized between 1.5 and 3 seconds)
-  time.sleep(random.uniform(1.5, 3.0))
+  time.sleep(2)
 
 print("Exiting...")
